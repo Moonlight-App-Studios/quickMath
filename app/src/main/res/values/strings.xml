@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">quickMath</string>
+
+    <string-array name="add_modes">
+        <item>Type</item>
+        <item>S-S</item>
+        <item>S-D</item>
+        <item>S-T</item>
+        <item>D-D</item>
+        <item>D-T</item>
+        <item>T-T</item>
+    </string-array>
+
+    <string-array name="add_count">
+        <item>Count</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="mul_modes">
+        <item>Sum Type</item>
+        <item>1D X 1D</item>
+        <item>2D X 1D</item>
+        <item>3D X 1D</item>
+        <item>4D X 1D</item>
+        <item>2D X 2D</item>
+        <item>3D X 2D</item>
+        <item>4D X 2D</item>
+    </string-array>
+
+    <string-array name="div_modes">
+        <item>Sum Type</item>
+        <item>2D ÷ 1D</item>
+        <item>3D ÷ 1D</item>
+        <item>4D ÷ 1D</item>
+        <item>5D ÷ 1D</item>
+        <item>3D ÷ 2D</item>
+        <item>4D ÷ 2D</item>
+        <item>5D ÷ 2D</item>
+        <item>4D ÷ 3D</item>
+        <item>5D ÷ 3D</item>
+    </string-array>
+
+    <string-array name="div_res_modes">
+        <item>Result Type</item>
+        <item>Decimals</item>
+        <item>Quotient &amp; Remainder</item>
+    </string-array>
+</resources>
