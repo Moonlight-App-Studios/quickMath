@@ -1,6 +1,5 @@
 package com.sda.bob.dictation;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -21,11 +20,11 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
+//import com.google.android.gms.ads.LoadAdError;
+//import com.google.android.gms.ads.interstitial.InterstitialAd;
+//import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 import java.util.Locale;
 import java.util.Objects;

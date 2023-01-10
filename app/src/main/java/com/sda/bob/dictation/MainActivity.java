@@ -1,23 +1,22 @@
 package com.sda.bob.dictation;
 
+import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.Objects;
-import java.util.Random;
 
 @SuppressWarnings("CommentedOutCode")
 public class MainActivity extends AppCompatActivity {
@@ -32,8 +31,11 @@ public class MainActivity extends AppCompatActivity {
 //    static int sumCount = 0;
 //    static int adTrigger;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
@@ -50,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
         appInfoButton = findViewById(R.id.appInfoButton);
 //        homepageBannerAd = findViewById(R.id.homepageBannerAd);
 
-        if (!isNetworkConnected()) {
-            Toast.makeText(getApplicationContext(), "Please Turn on Internet to use the app!", Toast.LENGTH_SHORT).show();
-            onBackPressed();
-        }
+//        if (!isNetworkConnected()) {
+//            Toast.makeText(getApplicationContext(), "Please Turn on Internet to use the app!", Toast.LENGTH_SHORT).show();
+//            onBackPressed();
+//        }
 
 //        adTrigger = new Random().nextInt(3) + 5;
 
@@ -69,21 +71,28 @@ public class MainActivity extends AppCompatActivity {
         alphButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, AlphActivity.class)));
         divButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, DivActivity.class)));
 
-        appInfoButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, InfoActivity.class)));
+//        appInfoButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, InfoActivity.class)));
+        appInfoButton.setOnClickListener(view -> {
+            try {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://dev?id=5751796953368988342")));
+            } catch (ActivityNotFoundException activityNotFoundException) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=5751796953368988342")));
+            }
+        });
     }
 
-    private boolean isNetworkConnected() {
-        try {
-            URL googlePing = new URL("http://www.google.com");
-            HttpURLConnection pingCheck = (HttpURLConnection) googlePing.openConnection();
-            pingCheck.setRequestMethod("GET");
-            pingCheck.setConnectTimeout(2000);
-            pingCheck.disconnect();
-
-            return pingCheck.getResponseCode() == 200;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
+//    private boolean isNetworkConnected() {
+//        try {
+//            URL googlePing = new URL("http://www.google.com");
+//            HttpURLConnection pingCheck = (HttpURLConnection) googlePing.openConnection();
+//            pingCheck.setRequestMethod("GET");
+//            pingCheck.setConnectTimeout(2000);
+//            pingCheck.disconnect();
+//
+//            return pingCheck.getResponseCode() == 200;
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
 }

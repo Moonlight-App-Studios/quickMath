@@ -1,6 +1,5 @@
 package com.sda.bob.dictation;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -19,11 +18,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
+//import com.google.android.gms.ads.LoadAdError;
+//import com.google.android.gms.ads.interstitial.InterstitialAd;
+//import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -45,8 +44,8 @@ public class MulActivity extends AppCompatActivity {
 
     Random random;
 
-    AdView homepageBannerAd;
-    InterstitialAd nSumAd;
+//    AdView homepageBannerAd;
+//    InterstitialAd nSumAd;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -63,10 +62,10 @@ public class MulActivity extends AppCompatActivity {
         startButton = findViewById(R.id.startButton);
         mulText = findViewById(R.id.mulText);
         answerText = findViewById(R.id.answerText);
-        homepageBannerAd = findViewById(R.id.homepageBannerAd);
+//        homepageBannerAd = findViewById(R.id.homepageBannerAd);
 
-        AdRequest adRequest = new AdRequest.Builder().build();
-        homepageBannerAd.loadAd(adRequest);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        homepageBannerAd.loadAd(adRequest);
 
         helpText.setOnClickListener(view -> {
             Dialog helpDialog = new Dialog(MulActivity.this);
@@ -255,21 +254,21 @@ public class MulActivity extends AppCompatActivity {
         status = 0;
     }
 
-    void prepareAd(AdRequest adRequest) {
-        InterstitialAd.load(getApplicationContext(), "ca-app-pub-8122105205019110/1975225139", adRequest, new InterstitialAdLoadCallback() {
-            @Override
-            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                super.onAdLoaded(interstitialAd);
-
-                nSumAd = interstitialAd;
-            }
-
-            @Override
-            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                super.onAdFailedToLoad(loadAdError);
-
-                nSumAd = null;
-            }
-        });
-    }
+//    void prepareAd(AdRequest adRequest) {
+//        InterstitialAd.load(getApplicationContext(), "ca-app-pub-8122105205019110/1975225139", adRequest, new InterstitialAdLoadCallback() {
+//            @Override
+//            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+//                super.onAdLoaded(interstitialAd);
+//
+//                nSumAd = interstitialAd;
+//            }
+//
+//            @Override
+//            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+//                super.onAdFailedToLoad(loadAdError);
+//
+//                nSumAd = null;
+//            }
+//        });
+//    }
 }
