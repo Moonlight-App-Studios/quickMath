@@ -43,7 +43,7 @@
     <LinearLayout
         android:id="@+id/sumLayout1"
         android:layout_width="wrap_content"
-        android:layout_height="325dp"
+        android:layout_height="350dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:orientation="vertical"
@@ -54,7 +54,7 @@
     <LinearLayout
         android:id="@+id/sumLayout2"
         android:layout_width="wrap_content"
-        android:layout_height="325dp"
+        android:layout_height="350dp"
         android:layout_marginTop="32dp"
         android:orientation="vertical"
         ads:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +64,7 @@
     <LinearLayout
         android:id="@+id/sumLayout3"
         android:layout_width="wrap_content"
-        android:layout_height="325dp"
+        android:layout_height="350dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:orientation="vertical"
@@ -80,7 +80,7 @@
         android:textColor="@color/black"
         android:textSize="36sp"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/homepageBannerAd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sumLayout2"
@@ -91,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/homepageBannerAd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sumLayout2">
@@ -128,20 +128,21 @@
         android:text="Need Any Help?\nClick here for instructions!"
         android:textAlignment="center"
         android:textColor="@color/positive"
-        app:layout_constraintBottom_toTopOf="@+id/homepageBannerAd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/homepageBannerAd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        ads:adUnitId="ca-app-pub-8122105205019110/1921284625"/>
+<!--    <com.google.android.gms.ads.AdView-->
+<!--        android:id="@+id/homepageBannerAd"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        ads:adSize="BANNER"-->
+<!--        ads:adUnitId="ca-app-pub-8122105205019110/1921284625"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.494"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

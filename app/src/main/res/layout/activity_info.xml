@@ -4,14 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".InfoActivity">
+
+<!--    <include-->
+<!--        android:id="@+id/quickmathAppPanel"-->
+<!--        layout="@layout/google_play_window_tttoue"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:elevation="16dp"-->
+<!--        android:outlineProvider="background" />-->
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:background="@drawable/ic_moonlight_alt_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleX="0.75"
+        android:scaleY="0.75"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,11 +33,24 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Click the logo to know more"
-        android:textSize="14sp"
+        android:text="Click on the Logo to know more"
+        android:textAlignment="center"
+        android:textColor="#FFFF77"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton"
         tools:ignore="HardcodedText" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:text="Check out our new and fun game"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#FFFF77"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView3"-->
+<!--        tools:ignore="HardcodedText" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -118,20 +118,20 @@ public class MulActivity extends AppCompatActivity {
             switch (status) {
                 case 0:
                     createSum();
-                    if (MainActivity.sumCount == MainActivity.adTrigger - 1)
-                        prepareAd(adRequest);
+//                    if (MainActivity.sumCount == MainActivity.adTrigger - 1)
+//                        prepareAd(adRequest);
                     break;
 
                 case 1:
                     clearAns();
-                    if (MainActivity.sumCount >= MainActivity.adTrigger) {
-                        if (nSumAd != null) {
-                            nSumAd.show(MulActivity.this);
-                            MainActivity.sumCount = 0;
-                            nSumAd = null;
-                        } else
-                            MainActivity.sumCount--;
-                    }
+//                    if (MainActivity.sumCount >= MainActivity.adTrigger) {
+//                        if (nSumAd != null) {
+//                            nSumAd.show(MulActivity.this);
+//                            MainActivity.sumCount = 0;
+//                            nSumAd = null;
+//                        } else
+//                            MainActivity.sumCount--;
+//                    }
                     break;
             }
         });
@@ -191,7 +191,7 @@ public class MulActivity extends AppCompatActivity {
         if (mode == 0)
             Toast.makeText(getApplicationContext(), "Please Select the right type of sum!", Toast.LENGTH_SHORT).show();
         else {
-            MainActivity.sumCount++;
+//            MainActivity.sumCount++;
             clearAns();
             helpText.setVisibility(View.GONE);
 

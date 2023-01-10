@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.sda.bob.dictation">
+    >
 
-    <uses-permission android:name="android.permission.INTERNET" />
+<!--    <uses-permission android:name="android.permission.INTERNET" />-->
 
     <application
         android:allowBackup="true"
@@ -18,13 +18,14 @@
             android:name=".InfoActivity"
             android:exported="true" />
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8122105205019110~5258373339" />
+<!--        <meta-data-->
+<!--            android:name="com.google.android.gms.ads.APPLICATION_ID"-->
+<!--            android:value="ca-app-pub-8122105205019110~5258373339" />-->
 
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
+            android:exported="true"
             tools:ignore="IntentFilterExportedReceiver,LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

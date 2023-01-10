@@ -46,8 +46,8 @@ public class DivActivity extends AppCompatActivity {
 
     Random random;
 
-    AdView homepageBannerAd;
-    InterstitialAd nSumAd;
+//    AdView homepageBannerAd;
+//    InterstitialAd nSumAd;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -63,10 +63,10 @@ public class DivActivity extends AppCompatActivity {
         startButton = findViewById(R.id.startButton);
         divText = findViewById(R.id.divText);
         answerText = findViewById(R.id.answerText);
-        homepageBannerAd = findViewById(R.id.homepageBannerAd);
-
-        AdRequest adRequest = new AdRequest.Builder().build();
-        homepageBannerAd.loadAd(adRequest);
+//        homepageBannerAd = findViewById(R.id.homepageBannerAd);
+//
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        homepageBannerAd.loadAd(adRequest);
 
         random = new Random();
         
@@ -120,20 +120,20 @@ public class DivActivity extends AppCompatActivity {
             switch (status) {
                 case 0:
                     createSum();
-                    if (MainActivity.sumCount == MainActivity.adTrigger - 1)
-                        prepareAd(adRequest);
+//                    if (MainActivity.sumCount == MainActivity.adTrigger - 1)
+//                        prepareAd(adRequest);
                     break;
 
                 case 1:
                     clearAns();
-                    if (MainActivity.sumCount >= MainActivity.adTrigger) {
-                        if (nSumAd != null) {
-                            nSumAd.show(DivActivity.this);
-                            MainActivity.sumCount = 0;
-                            nSumAd = null;
-                        } else
-                            MainActivity.sumCount--;
-                    }
+//                    if (MainActivity.sumCount >= MainActivity.adTrigger) {
+//                        if (nSumAd != null) {
+//                            nSumAd.show(DivActivity.this);
+//                            MainActivity.sumCount = 0;
+//                            nSumAd = null;
+//                        } else
+//                            MainActivity.sumCount--;
+//                    }
                     break;
             }
         });
@@ -194,7 +194,7 @@ public class DivActivity extends AppCompatActivity {
         if (mode * resMode == 0)
             Toast.makeText(getApplicationContext(), "Please Select the right type of sum!", Toast.LENGTH_SHORT).show();
         else {
-            MainActivity.sumCount++;
+//            MainActivity.sumCount++;
             clearAns();
             helpText.setVisibility(View.GONE);
 
@@ -274,21 +274,21 @@ public class DivActivity extends AppCompatActivity {
         status = 0;
     }
 
-    void prepareAd(AdRequest adRequest) {
-        InterstitialAd.load(getApplicationContext(), "ca-app-pub-8122105205019110/1975225139", adRequest, new InterstitialAdLoadCallback() {
-            @Override
-            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                super.onAdLoaded(interstitialAd);
-
-                nSumAd = interstitialAd;
-            }
-
-            @Override
-            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                super.onAdFailedToLoad(loadAdError);
-
-                nSumAd = null;
-            }
-        });
-    }
+//    void prepareAd(AdRequest adRequest) {
+//        InterstitialAd.load(getApplicationContext(), "ca-app-pub-8122105205019110/1975225139", adRequest, new InterstitialAdLoadCallback() {
+//            @Override
+//            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+//                super.onAdLoaded(interstitialAd);
+//
+//                nSumAd = interstitialAd;
+//            }
+//
+//            @Override
+//            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+//                super.onAdFailedToLoad(loadAdError);
+//
+//                nSumAd = null;
+//            }
+//        });
+//    }
 }

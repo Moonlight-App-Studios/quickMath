@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="100dp"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/quickmathInstallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="@color/play_green"
+
+        android:insetLeft="8dp"
+        android:insetTop="8dp"
+        android:insetRight="8dp"
+        android:insetBottom="8dp"
+        android:padding="0dp"
+        android:text="Install"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="quickMath"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/quickmathDetailsText"
+        app:layout_constraintStart_toStartOf="@+id/quickmathDetailsText"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/quickmathDetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Moonlight App Studios"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/quickmathLogoCardView"
+        app:layout_constraintStart_toEndOf="@+id/quickmathLogoCardView"
+        app:layout_constraintTop_toTopOf="@+id/quickmathLogoCardView"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="2.6 MB"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/quickmathDetailsText"
+        app:layout_constraintTop_toBottomOf="@+id/quickmathDetailsText"
+        tools:ignore="HardcodedText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/quickmathLogoCardView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="12dp"
+        android:elevation="12dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

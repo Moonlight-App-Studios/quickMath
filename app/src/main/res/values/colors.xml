@@ -8,4 +8,6 @@
     <color name="positive">#0000FF</color>
     <color name="negative">#FF0000</color>
     <color name="answer">#00BB00</color>
+
+    <color name="play_green">#056559</color>
 </resources>

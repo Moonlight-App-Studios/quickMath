@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
     Button alphButton;
     ImageButton appInfoButton;
 
-    AdView homepageBannerAd;
+//    AdView homepageBannerAd;
 
-    static int sumCount = 0;
-    static int adTrigger;
+//    static int sumCount = 0;
+//    static int adTrigger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,21 +48,21 @@ public class MainActivity extends AppCompatActivity {
         divButton = findViewById(R.id.divButton);
         alphButton = findViewById(R.id.alphButton);
         appInfoButton = findViewById(R.id.appInfoButton);
-        homepageBannerAd = findViewById(R.id.homepageBannerAd);
+//        homepageBannerAd = findViewById(R.id.homepageBannerAd);
 
         if (!isNetworkConnected()) {
             Toast.makeText(getApplicationContext(), "Please Turn on Internet to use the app!", Toast.LENGTH_SHORT).show();
             onBackPressed();
         }
 
-        adTrigger = new Random().nextInt(3) + 5;
+//        adTrigger = new Random().nextInt(3) + 5;
 
         /*RequestConfiguration configuration = new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("E31DD0DF9B5CFE51E75ABA11B514B326")).build();
         MobileAds.setRequestConfiguration(configuration);
         MobileAds.initialize(this, initializationStatus -> {});*/
 
-        AdRequest adRequest = new AdRequest.Builder().build();
-        homepageBannerAd.loadAd(adRequest);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        homepageBannerAd.loadAd(adRequest);
 
         addButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, AddActivity.class)));
         mulButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, MulActivity.class)));
